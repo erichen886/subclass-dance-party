@@ -5,8 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background-image: url(1820661.jpg);
-  background-position: center;
+  background: url(raven.jpg) top right no-repeat;
+  background-attachment: fixed;
+  background-size: 100%
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -28,21 +29,34 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-#drake {
-  /* background-image: url('https://www.puppyschoolapp.co.uk/wp-content/uploads/sites/35/2016/06/puppy-img-02-300x212.jpg'); */
-  /* border: 500px none; */
-  /* border: 0px hidden none;*/
-  border: none;
-  /* border: 10px solid blue; */
-  /* width: 300px; */
-  /* height: 212px; */
-  position:relative;
-
+.drake {
+  background: url(drake.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
 }
 
-img {
+.flipped {
   transform: rotateY(180deg);
 }
 .ironMan {
+  background-image: url(ironman.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  animation: spin 5s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }

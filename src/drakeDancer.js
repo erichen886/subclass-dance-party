@@ -1,7 +1,7 @@
 var makeDrakeDancer = function(top, left, timeBetweenSteps) {
   makeDancer.apply(this, arguments);
-  this.$node = $('<span class="dancer" id="drake"><img src="drake.png" ></img> </span>');
-  this.setPosition (Math.random() * 200, Math.random() * 200);
+  this.$node = $('<span class="drake"></span>');
+  this.setPosition (top, left);
 
 };
 
@@ -13,6 +13,9 @@ makeDrakeDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
 
   // this.$node.toggle();
+  // .toggleClass("flipped");
+  this.$node.toggleClass('flipped');
+
 };
 
 //<img src="https://www.puppyschoolapp.co.uk/wp-content/uploads/sites/35/2016/06/puppy-img-02-300x212.jpg"  width="300" height="210"></img>

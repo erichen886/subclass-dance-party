@@ -21,3 +21,18 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function() {
+  var styleSettings = {
+    top: 50
+  };
+  this.$node.css(styleSettings);
+};
+
+makeDancer.prototype.breakLine = function() {
+  var styleSettings = {
+    top: $("body").height() * Math.random(),
+    left: $("body").width() * Math.random(),
+  };
+  this.$node.css(styleSettings);
+};
